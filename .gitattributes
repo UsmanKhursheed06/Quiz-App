@@ -1,14 +1,1 @@
 # Override language detection for Dart
-*.dart linguist-language=Dart
-
-# Mark other languages files as vendored
-*.cpp linguist-vendored
-*.h linguist-vendored
-*.m linguist-vendored
-*.c linguist-vendored
-*.cc linguist-vendored
-*.CMakeLists.txt linguist-vendored
-*.cmake linguist-vendored
-*.cmake.in linguist-vendored
-*.cmake.out linguist-vendored
-*.cmake.temp linguist-vendored

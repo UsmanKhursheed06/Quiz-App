@@ -1,0 +1,7 @@
+# Override language detection for Dart
+*.dart linguist-language=Dart
+
+# Mark other languages files as vendored
+*.cpp linguist-vendored
+*.h linguist-vendored
+*.m linguist-vendored

@@ -9,3 +9,6 @@
 *.cc linguist-vendored
 *.CMakeLists.txt linguist-vendored
 *.cmake linguist-vendored
+*.cmake.in linguist-vendored
+*.cmake.out linguist-vendored
+*.cmake.temp linguist-vendored

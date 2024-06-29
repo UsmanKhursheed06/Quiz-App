@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'answer_buttons_styling.dart';
 import 'package:second_app/data/questions_answers.dart';
+import 'package:second_app/quiz.dart';
 
 
 class Questions extends StatefulWidget {
-  const Questions({super.key});
+  const Questions({required this.onSelectAns,super.key});
+  final void Function (String answer) onSelectAns;
+
   @override
   State<Questions> createState() {
     return _Questions();
@@ -14,10 +17,12 @@ class Questions extends StatefulWidget {
 
 
 class _Questions extends State<Questions> {
+
 var index=0;
 
-void changeQuestion()
+void changeQuestion(String selectedAnswers)
 {
+  widget.onSelectAns(selectedAnswers);
   setState(() {
     if(index<questions.length-1)
     {index++;}
@@ -49,7 +54,7 @@ void changeQuestion()
 
             ...currentQuestion.getShuffled().map((items) 
             {
-              return AnswerButton(anstext: items, onTap: changeQuestion);
+              return AnswerButton(anstext: items, onTap: (){changeQuestion(items);});
             }),
             
              //we have converted the string list into the list of widgets and used the spread operator to take out the list from a list and using it as simple widgets basically making the buttons dynamically which is very important concept..

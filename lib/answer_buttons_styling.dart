@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AnswerButton extends StatelessWidget {
-  AnswerButton({required this.anstext, required this.onTap, super.key});
+  const AnswerButton({required this.anstext, required this.onTap, super.key});
   final String anstext;
   final void Function() onTap;
   @override
@@ -16,7 +16,7 @@ class AnswerButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(40),
         ),
       ),
-      child: Text(anstext),
+      child: Text(anstext,textAlign: TextAlign.center,),
     );
   }
 }

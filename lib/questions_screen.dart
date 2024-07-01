@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'answer_buttons_styling.dart';
 import 'package:second_app/data/questions_answers.dart';
-import 'package:second_app/quiz.dart';
+
 
 
 class Questions extends StatefulWidget {
@@ -35,9 +35,9 @@ void changeQuestion(String selectedAnswers)
     final currentQuestion = questions[index];
 
     return SizedBox(
-      width: double.infinity,
+     width: double.infinity,
       child: Container(
-        margin: const EdgeInsets.all(40),
+       margin: const EdgeInsets.all(40),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,

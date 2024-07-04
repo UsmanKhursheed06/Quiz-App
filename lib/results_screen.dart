@@ -11,10 +11,12 @@ class ResultsScreen extends StatelessWidget {
     final List<Map<String, Object>> Summary = [];
     for (int i = 0; i < chosenAnswers.length; i++) {
       Summary.add({
+
         'question_index': i,
         'question': questions[i].text,
         'correct_answer': questions[i].answers[0],
         'user_answer': chosenAnswers[i],
+        
       });
     }
 

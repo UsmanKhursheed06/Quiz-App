@@ -6,6 +6,7 @@ class ResultsScreen extends StatelessWidget {
   ResultsScreen({required this.chosenAnswers, super.key});
 
   final List<String> chosenAnswers;
+  
 
   List<Map<String, Object>> getSummaryData() {
     final List<Map<String, Object>> Summary = [];
@@ -16,7 +17,7 @@ class ResultsScreen extends StatelessWidget {
         'question': questions[i].text,
         'correct_answer': questions[i].answers[0],
         'user_answer': chosenAnswers[i],
-        
+
       });
     }
 
@@ -43,7 +44,7 @@ class ResultsScreen extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              QuestionsSummary(getSummaryData()),
+               QuestionsSummary(getSummaryData()),
               const SizedBox(
                 height: 30,
               ),
